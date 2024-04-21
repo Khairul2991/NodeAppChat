@@ -1,0 +1,7 @@
+- Buatlah list kata - kata badword di mongoDB dalam sebuah collection *collection = database dalam SQL
+- (optional) gunakan Schema mongoose
+- Lakukan pengecekan setiap ditemukan badword lalu ganti dengan karakter *** atau ### 
+- Jumlah karakter *** atau ### harus sama dengan jumlah karakter badword yang ditemukan
+- Project harus dikerjakan menggunakan source code pada saat kuliah
+
+ex: anggap mawar adalah badword, mawar --> 5 karakter, maka output harus ***** atau #####
