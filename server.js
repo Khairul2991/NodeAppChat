@@ -21,9 +21,10 @@ var Badword = mongoose.model('Badword', BadwordSchema);
 
 var badwords = [
     { word: 'mawar' },
-    { word: 'kucing' },
     { word: 'tikus' },
-    { word: 'roti' },
+    { word: 'anjing' },
+    { word: 'babi' },
+    { word: '2' },
     { word: '1' },
 ];
 
@@ -59,7 +60,7 @@ app.get('/pesan', (req, res) => {
 async function postPesan(pesan) {
     var badwords = await Badword.find({});
     badwords.forEach(async function(badword) {
-        var regex = new RegExp(badword.word, 'g');
+        var regex = new RegExp(badword.word, 'gi');
         pesan.pesan = pesan.pesan.replace(regex, '*'.repeat(badword.word.length));
         pesan.nama = pesan.nama.replace(regex, '*'.repeat(badword.word.length));
     });
